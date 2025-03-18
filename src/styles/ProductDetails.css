@@ -1,0 +1,75 @@
+/* Make the div fill the entire screen using flexbox */
+div {
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  unicode-bidi: isolate; /* This property isolates the bidi context */
+  background-color: #f9f9f9; /* Optional background color */
+  box-sizing: border-box; /* To ensure padding/margins don't affect the width/height */
+}
+
+/* Example of child element styling (e.g., the product details card) */
+.product-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%; /* Make it 80% of the viewport width */
+  max-width: 600px; /* Max width to prevent it from becoming too wide */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #28a745;
+}
+
+/* Loading spinner styling */
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
